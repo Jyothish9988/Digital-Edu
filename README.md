@@ -4,3 +4,13 @@
   wherein the student corresponded with the school via mail, Video Conferencing and messages .Digital education is a technology mediated modality 
   and has evolved with the evolution of technologies such as video conferencing, and internet . Today, it usually involves online education and the 
   learning is usually mediated by some form of technology.</p>
+<img src="screenshots/0.jpg">
+<img src="screenshots/1.jpg">
+<img src="screenshots/2.jpg">
+<img src="screenshots/3.jpg">
+<img src="screenshots/4.jpg">
+<img src="screenshots/5.jpg">
+<img src="screenshots/6.jpg">
+
+
+
