@@ -29,7 +29,7 @@ $mail->SMTPAuth = true;
 $mail->Username = "edudigital643@gmail.com";
 
 // password
-$mail->Password = "ikafxigrsooqyqra";
+$mail->Password = "";
 $mail->Port = 587; 
 // set From
 $mail->From = "edudigital643@gmail.com";
