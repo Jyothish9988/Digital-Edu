@@ -1,0 +1,89 @@
+
+function hod_pta_submit($batch,$date,$sem)
+{
+
+date_default_timezone_set("Asia/Kolkata");
+$time=date('h:i:sa');
+	$ptakey=uniquekey("pta","ptakey");
+	$qry="insert into pta (ptakey,batch,date,sem,time) values('".$ptakey."','".$batch."','".$date."','".$sem."','".$time."')";
+	$exe=mysql_query($qry);
+	if($exe)
+	{
+		echo"<script>alert('pta submit successfull')</script>";
+	}
+else
+{
+	echo"<script>alert('pta submit unsuccessfull')</script>";
+}
+}
+
+function hod_pta_fetch($sem)
+{
+	$qry="select * from pta where sem='".$sem."'";
+	// echo$qry;exit;
+		$exe=mysql_query($qry);
+		$arr=array();
+	while($rr=mysql_fetch_array($exe))
+	{
+		$arr[]=$rr;
+	}
+	return $arr;
+}
+
+
+
+function hod_pta_edit($batch,$date,$ptakey,$sem)
+{
+
+date_default_timezone_set("Asia/Kolkata");
+$time=date('h:i:sa');
+	$qry="update pta set batch='".$batch."',date='".$date."' where ptakey='".$ptakey."'";
+	$exe=mysql_query($qry);
+	if($exe)
+	{
+		echo"<script>alert('pta updation successfull');window.location.href='hod_pta_submit.php?sem=$sem';</script>";
+
+	}
+else
+{
+	echo"<script>alert('pta updation unsuccessfull');window.location.href='hod_pta_submit.php?sem=$sem';</script>";
+}
+}
+
+function hod_pta_delete($ptakey,$sem)
+{
+	$qry="delete from pta where ptakey='".$ptakey."'";
+	$exe=mysql_query($qry);
+	if($exe){
+		
+			echo"<script>alert('Deletion successfull');window.location.href='hod_pta_submit.php?sem=$sem';</script>";
+	
+	}
+	else{
+		echo"<script>alert('Deletion unsuccessfull');window.location.href='hod_pta_submit.php?sem=$sem';</script>";
+	}
+}
+
+
+
+function std_pta_view($sem,$lkey)
+{
+	$lid=keytoid("login","lkey",$lkey);
+	$qry1="select doj from stdreg where lid='".$lid."'";
+	$exe1=mysql_query($qry1);
+	$doj=null;
+		while($rr=mysql_fetch_array($exe1))
+		{
+			$doj=$rr['doj'];
+		}
+	$batch=date('Y',strtotime($doj));
+	$qry2="select * from pta where sem='".$sem."' and batch='".$batch."'";
+	// echo$qry2;exit;
+	$exe2=mysql_query($qry2);
+	$arr=array();
+		while($rr=mysql_fetch_array($exe2))
+		{
+			$arr[]=$rr;
+		}
+		return $arr;
+}

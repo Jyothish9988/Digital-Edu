@@ -1,0 +1,122 @@
+<?php
+include_once"settings/settings.php";
+include_once"classes/userclass.php";
+$obj =new userclass();
+if(isset($_POST['hide'])AND($_POST['hide'])=='h')
+{
+	if(isset($_POST['name'])AND($_POST['name'])!=NULL)
+		{
+	
+		if(isset($_POST['photo'])AND($_POST['photo'])!=NULL)
+		{
+			if(isset($_POST['address'])AND($_POST['address'])!=NULL)
+				{
+			
+				if(isset($_POST['pin'])AND($_POST['pin'])!=NULL)
+				{
+					if(isset($_POST['dob'])AND($_POST['dob'])!=NULL)
+					{
+						if(isset($_POST['sex'])AND($_POST['sex'])!=NULL)
+						{
+							if(isset($_POST['religion'])AND($_POST['religion'])!=NULL)
+							{
+								if(isset($_POST['caste'])AND($_POST['caste'])!=NULL)
+									{
+									
+									if(isset($_POST['fname'])AND($_POST['fname'])!=NULL)
+									{
+										
+										if(isset($_POST['fjob'])AND($_POST['fjob'])!=NULL)
+										{
+											if(isset($_POST['fpno'])AND($_POST['fpno'])!=NULL)
+										{
+											if(isset($_POST['mname'])AND($_POST['mname'])!=NULL)
+										{
+											if(isset($_POST['mjob'])AND($_POST['mjob'])!=NULL)
+										{
+											if(isset($_POST['mpno'])AND($_POST['mpno'])!=NULL)
+										{
+											if(isset($_POST['course'])AND($_POST['course'])!=NULL)
+										{
+											if(isset($_POST['spno'])AND($_POST['spno'])!=NULL)
+										{
+											if(isset($_POST['aadhar'])AND($_POST['aadhar'])!=NULL)
+										{
+											if(isset($_POST['dep'])AND($_POST['dep'])!=NULL)
+										{
+											if(isset($_POST['ten'])AND($_POST['ten'])!=NULL)
+										{
+											if(isset($_POST['tencer'])AND($_POST['tencer'])!=NULL)
+										{
+											if(isset($_POST['plustwo'])AND($_POST['plustwo'])!=NULL)
+										{
+											if(isset($_POST['plustwocer'])AND($_POST['plustwocer'])!=NULL)
+										{
+											if(isset($_POST['doj'])AND($_POST['doj'])!=NULL)
+										{
+											if(isset($_POST['grad'])AND($_POST['grad'])!=NULL)
+										{
+											if(isset($_POST['email'])AND($_POST['email'])!=NULL)
+										{
+											if(isset($_POST['adno'])AND($_POST['adno'])!=NULL)
+										{
+											$name=trim($_POST['name']);
+											$photo=trim($_POST['photo']);
+											$address=trim($_POST['address']);
+											$pin=trim($_POST['pin']);
+											$dob=trim($_POST['dob']);
+											$sex=trim($_POST['sex']);
+											$religion=trim($_POST['religion']);
+											$caste=trim($_POST['caste']);
+											$fname=trim($_POST['fname']);
+											$fjob=trim($_POST['fjob']);
+											$fpno=trim($_POST['fpno']);
+											$mname=trim($_POST['mname']);
+											$mjob=trim($_POST['mjob']);
+											$mpno=trim($_POST['mpno']);
+											$course=trim($_POST['course']);
+											$spno=trim($_POST['spno']);
+											$aadhar=trim($_POST['aadhar']);
+											$dep=trim($_POST['dep']);
+											$ten=trim($_POST['ten']);
+											$tencer=trim($_POST['tencer']);		
+											$plustwo=trim($_POST['plustwo']);
+											$plustwocer=trim($_POST['plustwocer']);
+											$doj=trim($_POST['doj']);
+											$grad=trim($_POST['grad']);
+											$email=trim($_POST['email']);
+											$adno=trim($_POST['adno']);
+											$obj->student_reg($name,$photo,$address,$pin,$dob,$sex,$religion,$caste,$fname,$fjob,$fpno,$mname,$mjob,$mpno,$course,$spno,$aadhar,$dep,$ten,$tencer,$plustwo,$plustwocer,$doj,$grad,$email,$adno);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+
+		}
+													
+												
+		
+$smartyObj->display('admin_student_reg.tpl');
+?>
